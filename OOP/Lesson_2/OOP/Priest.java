@@ -1,5 +1,4 @@
-
-
+package Lesson_2.OOP;
 public class Priest extends BaseHero{
 
 

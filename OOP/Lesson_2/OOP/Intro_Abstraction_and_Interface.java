@@ -1,5 +1,9 @@
+package Lesson_2.OOP;
 import static print_module.print_library.println;
 import java.util.Random;
+
+import alliance.Human;
+
 import java.util.ArrayList;
 
 /**
@@ -26,23 +30,37 @@ public class Intro_Abstraction_and_Interface {
 
         var teams = new ArrayList<BaseHero>();
 
-        for (int i = 0; i < teamCount; i++){
-            int val = rand.nextInt(3);
+        // for (int i = 0; i < teamCount; i++){
+        //     int val = rand.nextInt(4);
 
-            switch (val) {
-                case 0:
-                    teams.add(new Priest(""));
-                    break;
-                case 1:
-                    teams.add(new Magician(""));
-                    break;
-                case 2:
-                    teams.add(new Druid(""));
-                    break;
-                default:
-                    break;
-            }
-            println(teams.get(i).getInfo());
-        }
+        //     switch (val) {
+        //         case 0:
+        //             teams.add(new Priest(""));
+        //             break;
+        //         case 1:
+        //             teams.add(new Magician(""));
+        //             break;
+        //         case 2:
+        //             teams.add(new Druid(""));
+        //             break;
+        //         case 3:
+        //             teams.add(new Human(""));
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        //     println(teams.get(i).getInfo());
+        // }
+
+        Priest priest = new Priest("Blessed");
+        println(priest.getInfo());
+        Druid druid = new Druid("Drull");
+        println(druid.getInfo());
+        Magician magician = new Magician("Archmage");
+        println(magician.getInfo());
+
+        priest.Attack(magician);
+        println(magician.getInfo());
+        
     }
 }

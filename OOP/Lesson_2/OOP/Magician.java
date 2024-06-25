@@ -1,7 +1,9 @@
+package Lesson_2.OOP;
 
 /*
  * Данный класс создан для реализации примера Наследования в ООП
  */
+
 public class Magician extends BaseHero{
 //           дочерний       родительский
 

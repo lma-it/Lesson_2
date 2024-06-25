@@ -1,3 +1,4 @@
+package Lesson_2.OOP;
 import java.util.Random;
 
 public class Druid extends BaseHero {
