@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class BaseHero {
+public abstract class BaseHero {
     protected static int number;
     protected static Random rand;
 
@@ -40,7 +40,7 @@ public class BaseHero {
     public void GetDamage(int damage){
         if (this.hp - damage > 0){
             this.hp -= damage;
-        }
+        } else { die(); }
     }
 
     public int Attack(BaseHero target){
@@ -48,5 +48,7 @@ public class BaseHero {
         target.GetDamage(damage);
         return damage;
     }
+
+    public abstract void die();
     
 }

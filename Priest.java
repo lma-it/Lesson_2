@@ -16,5 +16,10 @@ public class Priest extends BaseHero{
         return String.format("%s Elixir: %d", super.getInfo(), this.elixir);
     }
 
+    @Override
+    public void die() {
+        BaseHero.names.remove(this.name);
+    }
+
 
 }

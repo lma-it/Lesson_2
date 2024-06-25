@@ -1,6 +1,7 @@
 import static print_module.print_library.println;
 import java.util.Random;
 import java.util.ArrayList;
+
 /**
  * Intro_Abstraction_and_Interface
  */
@@ -26,7 +27,7 @@ public class Intro_Abstraction_and_Interface {
         var teams = new ArrayList<BaseHero>();
 
         for (int i = 0; i < teamCount; i++){
-            int val = rand.nextInt(4);
+            int val = rand.nextInt(3);
 
             switch (val) {
                 case 0:
@@ -37,9 +38,6 @@ public class Intro_Abstraction_and_Interface {
                     break;
                 case 2:
                     teams.add(new Druid(""));
-                    break;
-                case 3:
-                    teams.add(new BaseHero(""));
                     break;
                 default:
                     break;
