@@ -18,7 +18,7 @@ public abstract class BaseHero {
 
     public BaseHero(String name){
         if(name.isEmpty() || names.contains(name)){
-            this.name = String.format("%s_Name_%d", getClass().toString().replaceAll("class ", ""), ++BaseHero.number);
+            this.name = String.format("%s_Name_%d", getClass().toString().replaceAll("class ", "").replaceAll("alliance.", ""), ++BaseHero.number);
             this.maxHp = BaseHero.rand.nextInt(100, 200);
             this.hp = maxHp;
         }else{
