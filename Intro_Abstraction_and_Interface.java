@@ -1,4 +1,6 @@
 import static print_module.print_library.println;
+import java.util.Random;
+import java.util.ArrayList;
 /**
  * Intro_Abstraction_and_Interface
  */
@@ -18,7 +20,31 @@ public class Intro_Abstraction_and_Interface {
         Intro_Abstraction_and_Interface intro_Abstraction_and_Interface = new Intro_Abstraction_and_Interface();
         intro_Abstraction_and_Interface.A(); // В этом случае проблем нет и не статический метод А() отработает как положено.
 
-        
+        int teamCount = 10;
+        Random rand = new Random();
 
+        var teams = new ArrayList<BaseHero>();
+
+        for (int i = 0; i < teamCount; i++){
+            int val = rand.nextInt(4);
+
+            switch (val) {
+                case 0:
+                    teams.add(new Priest(""));
+                    break;
+                case 1:
+                    teams.add(new Magician(""));
+                    break;
+                case 2:
+                    teams.add(new Druid(""));
+                    break;
+                case 3:
+                    teams.add(new BaseHero(""));
+                    break;
+                default:
+                    break;
+            }
+            println(teams.get(i).getInfo());
+        }
     }
 }
