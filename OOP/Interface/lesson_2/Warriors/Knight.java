@@ -1,5 +1,5 @@
 package Interface.lesson_2.Warriors;
 
-public class Knight {
+public class Knight extends Warrior{
     
 }

@@ -1,5 +1,5 @@
 package Interface.lesson_2.Healers;
 
-public class Druid {
+public class Druid extends Healer{
     
 }
