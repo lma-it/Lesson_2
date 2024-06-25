@@ -4,7 +4,21 @@ import static print_module.print_library.println;
  */
 public class Intro_Abstraction_and_Interface {
 
+    void A(){
+        println("A()");
+    }
+
     public static void main(String[] args) {
         println("Hello");
+
+        // АБСТРАКЦИЯ - это свойство системы, позволяющее описывать общие характеристики базового класса, для всех его производных классов, а наполнение деталями представляется каждому из этих классов.
+
+        // A(); при попытке вызвать не static метод в static main программа даже не скомпилируется, чтоб этого избежать, необходимо создать экзкспляр класса Intro_Abstract_and_Interface и уже у экзкмлпяра этого класса можно будет вызвать метод A().
+
+        Intro_Abstraction_and_Interface intro_Abstraction_and_Interface = new Intro_Abstraction_and_Interface();
+        intro_Abstraction_and_Interface.A(); // В этом случае проблем нет и не статический метод А() отработает как положено.
+
+        
+
     }
 }
