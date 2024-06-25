@@ -1,5 +1,11 @@
 package Interface.lesson_2.Healers;
 
-public class Druid extends Healer{
-    
+import Interface.Hero;
+
+public class Druid extends Hero implements Healer{
+
+    @Override
+    public void healing(Hero target) {
+
+    }
 }
