@@ -1,5 +1,5 @@
 package TextEditor;
 
 public interface UIMenu {
-    public void MainMenu(int value, char[] text, String filePath);
+    public void MainMenu(char[] text, String filePath);
 }

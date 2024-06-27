@@ -11,18 +11,20 @@ public class Program implements UIMenu{
         String text = scanner.nextLine();
         char[] textForFile = text.toCharArray();
 
-        println("Выберете в каком формате вы хотите сохранить Ваш файл: ");
-        println("1. .doc format.");
-        println("2. .md format.");
-        println("3. .txt format.");
-        int value = scanner.nextInt();
+        
         Program program = new Program();
-        program.MainMenu(value, textForFile, filePath);
+        program.MainMenu(textForFile, filePath);
         scanner.close();
     }
 
     @Override
-    public void MainMenu(int value, char[] text, String filePath) {
+    public void MainMenu(char[] text, String filePath) {
+        println("Выберете в каком формате вы хотите сохранить Ваш файл: ");
+        println("1. .doc format.");
+        println("2. .md format.");
+        println("3. .txt format.");
+        Scanner scanner = new Scanner(System.in);
+        int value = scanner.nextInt();
         switch (value) {
             case 1:
                 FileToDoc fileToDoc = new FileToDoc();
@@ -36,6 +38,7 @@ public class Program implements UIMenu{
                 FileToTxt fileToTxt = new FileToTxt();
                 fileToTxt.saveFile(text, filePath);
             default:
+                scanner.close();
                 break;
         }
     }
